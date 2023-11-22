@@ -15,6 +15,9 @@
 
 ### Base de Données (MongoDB)
 1.	Modification de la structure de données : Adapter le schéma de la base de données pour gérer les livres y compris ceux sans ISBN.
+
+## Diagramme de cas d'utilisation
+![](UseCaseTP2.drawio.png)
 ## Diagramme de séquence
 ```mermaid
 sequenceDiagram
