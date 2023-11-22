@@ -15,3 +15,51 @@
 
 ### Base de Données (MongoDB)
 1.	Modification de la structure de données : Adapter le schéma de la base de données pour gérer les livres y compris ceux sans ISBN.
+## Diagramme de séquence
+```mermaid
+sequenceDiagram
+    participant Usager as "👤 Usager"
+     participant Bibliothécaire as "👤 Bibliothécaire"
+    participant Système as "💻 Système"
+    participant MongoDB as "🏢 MongoDB"
+
+    Usager->> + Système: Rechercher un livre
+        Système ->> + Usager : demander ISBN ou titre
+        Usager ->> - Système : Entrer ISBN ou titre
+        Système-->> +MongoDB: Rechercher le livre par ISBN ou titre
+        MongoDB-->>-Système: Renvoyer les résultats de la recherche
+
+        alt : si ISBN ou Titre est valide:
+            Système->>Usager: Afficher les résultats de livre
+        else : Sinon : 
+            Système ->> - Usager : Afficher livre inexistant
+        end
+
+    Bibliothécaire->> + Système: Ajouter un livre (créer un nouveau livre)
+    Système->>Bibliothécaire: Demander ISBN ou titre
+       
+    Bibliothécaire->>Système: Entrer ISBN   
+    Système-->>Système: Valider ISBN (si fourni)
+    alt : Si ISBN non valide
+     Système ->> Bibliothécaire : retourner mes d'erreur<br>(ISBN non valide)<br>demander à nouveau ISBN
+     
+    else : Si ISBN valide
+    Système-->>MongoDB: Vérifier si ISBN existe
+    MongoDB-->>Système: Renvoyer le statut de l'ISBN
+        alt : Si ISBN existe
+            Système->>Bibliothécaire: ISBN existe déjà, informer le bibliothécaire
+        else : Si ISBN n'existe pas
+            Système ->> Bibliothécaire: demander titre (obligatoire)
+            Bibliothécaire->>Système: Entrer Titre 
+            Système ->> Bibliothécaire: demander détails du livre
+            Bibliothécaire->>Système: Ajouter les détails du livre (auteur, année, etc.)
+        end
+       
+       
+
+    Système-->>MongoDB: Sauvegarder les informations du livre
+    Système->> - Bibliothécaire: Livre ajouté avec succès
+    end
+    
+
+```
