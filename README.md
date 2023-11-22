@@ -1,5 +1,5 @@
-# tp2
-# Proposition de Mise à Jour du Système de Gestion de Bibliothèque
+# TP2
+## Proposition de Mise à Jour du Système de Gestion de Bibliothèque
 
 
 ## Solution Proposée
@@ -14,4 +14,4 @@
 3.	Ajout de livre : Implémenter la fonctionnalité pour insérer les détails du livre dans MongoDB.
 
 ### Base de Données (MongoDB)
-1.	Modification de la structure de données : Adapter le schéma de la base de données pour gérer les livres sans ISBN.
+1.	Modification de la structure de données : Adapter le schéma de la base de données pour gérer les livres y compris ceux sans ISBN.
