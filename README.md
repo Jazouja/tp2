@@ -29,12 +29,12 @@ sequenceDiagram
     participant MongoDB as "🏢 MongoDB"
 
     Usager->> + Système: Rechercher un livre
-        Système ->> + Usager : demander ISBN ou titre
-        Usager ->> - Système : Entrer ISBN ou titre
-        Système-->> +MongoDB: Rechercher le livre par ISBN ou titre
+        Système ->> + Usager : demander ISBN ou titre ou auteur ou année
+        Usager ->> - Système : Entrer ISBN ou titre ou auteur ou année
+        Système-->> +MongoDB: Rechercher le livre par ISBN ou titre ou auteur ou année
         MongoDB-->>-Système: Renvoyer les résultats de la recherche
 
-        alt : si ISBN ou Titre est valide:
+        alt : si ISBN ou Titre ou auteur ou année est valide:
             Système->>Usager: Afficher les résultats de livre
         else : Sinon : 
             Système ->> - Usager : Afficher livre inexistant
