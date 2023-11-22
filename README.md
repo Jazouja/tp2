@@ -5,8 +5,9 @@
 ## Solution Proposée
 
 ### Modifications au Front-end (Vue.js)
-1.	Interface d'ajout de livre : Ajouter une interface utilisateur permettant aux bibliothécaires d'entrer les détails du livre, y compris l'ISBN (si disponible) ou le titre.
-2.	Validation de l'entrée : Intégrer une validation pour vérifier la présence soit de l'ISBN soit du titre (pour les livres sans ISBN).
+1.Interface de Recherche de livres : Ajouter une interface utilisateur permettant aux usagers de rechercher des livres par son ISBN et/ou son titre.
+2.Interface d'ajout de livre : Ajouter une interface utilisateur permettant aux bibliothécaires d'entrer les détails du livre, y compris l'ISBN (si disponible) ou le titre.
+3.	Validation de l'entrée : Intégrer une validation pour vérifier la présence soit de l'ISBN soit du titre (pour les livres sans ISBN).
    
 ### Modifications au Back-end (Express.js)
 1.	Validation de l'ISBN : Ajouter une logique pour valider l'ISBN et vérifier s'il existe déjà dans la base de données MongoDB.
