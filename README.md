@@ -5,7 +5,7 @@
 ## Solution Proposée
 
 ### Modifications au Front-end (Vue.js)
-1. Interface de Recherche de livres : Ajouter une interface utilisateur permettant aux usagers de rechercher des livres par son ISBN et/ou son titre.
+1. Interface de Recherche de livres : Ajouter une interface utilisateur permettant aux usagers de rechercher des livres par son ISBN et/ou son titre ou son auteur ou son année.
 2. Interface d'ajout de livre : Ajouter une interface utilisateur permettant aux bibliothécaires d'entrer les détails du livre, y compris l'ISBN (si disponible) ou le titre.
 3.	Validation de l'entrée : Intégrer une validation pour vérifier la présence soit de l'ISBN soit du titre (pour les livres sans ISBN).
    
