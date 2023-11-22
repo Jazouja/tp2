@@ -11,9 +11,10 @@
    
 ### Modifications au Back-end (Express.js)
 1.	Validation de la recherche : Ajouter une logique pour retourner les résultats de la recherche soit par ISBN ou titre  ou auteur ou année.
-2.	Validation de l'ISBN : Ajouter une logique pour valider l'ISBN et vérifier s'il existe déjà dans la base de données MongoDB.
-3.	Gestion des livres sans ISBN : Si l'ISBN n'est pas disponible, utiliser le titre comme identifiant unique.
-4.	Ajout de livre : Implémenter la fonctionnalité pour insérer les détails du livre dans MongoDB.
+2. Ajout de livre : Implémenter la fonctionnalité pour insérer les détails du livre dans MongoDB.
+3. Validation de l'ISBN : Ajouter une logique pour valider l'ISBN et vérifier s'il existe déjà dans la base de données MongoDB.
+4.	Gestion des livres sans ISBN : Si l'ISBN n'est pas disponible, utiliser le titre comme identifiant unique.
+
 
 ### Base de Données (MongoDB)
 1.	Modification de la structure de données : Adapter le schéma de la base de données pour gérer les livres y compris ceux sans ISBN.
