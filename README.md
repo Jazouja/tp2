@@ -49,7 +49,7 @@ sequenceDiagram
     Bibliothécaire->>Système: Entrer ISBN   
     Système-->>Système: Valider ISBN (si fourni)
     alt : Si ISBN non valide
-     Système ->> Bibliothécaire : retourner mes d'erreur<br>(ISBN non valide)<br>demander à nouveau ISBN
+     Système ->> Bibliothécaire : retourner msg d'erreur<br>(ISBN non valide)<br>demander à nouveau ISBN
      
     else : Si ISBN valide
     Système-->>MongoDB: Vérifier si ISBN existe
